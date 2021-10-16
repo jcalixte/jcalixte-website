@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css?family=Fenix|Fira+Mono");
+
+:root {
+  --main-color: hsl(0, 0%, 80%);
+}
+
+:root {
+  --vt-c-white: #ffffff;
+  --vt-c-white-soft: #f8f8f8;
+  --vt-c-white-mute: #f2f2f2;
+
+  --vt-c-black: hsl(229, 24%, 13%);
+  --vt-c-black-soft: hsl(230, 25%, 25%);
+  --vt-c-black-mute: hsl(228, 37%, 16%);
+
+  --vt-c-indigo: #2c3e50;
+
+  --vt-c-divider-light-1: rgba(60, 60, 60, 0.29);
+  --vt-c-divider-light-2: rgba(60, 60, 60, 0.12);
+  --vt-c-divider-dark-1: rgba(84, 84, 84, 0.65);
+  --vt-c-divider-dark-2: rgba(84, 84, 84, 0.48);
+
+  --vt-c-text-light-1: var(--vt-c-indigo);
+  --vt-c-text-light-2: rgba(60, 60, 60, 0.66);
+  --vt-c-text-dark-1: var(--vt-c-white);
+  --vt-c-text-dark-2: hsl(0, 0%, 80%);
+}
+
+/* semantic color variables for this project */
+:root {
+  --color-background: var(--vt-c-white);
+  --color-background-soft: var(--vt-c-white-soft);
+  --color-background-mute: var(--vt-c-white-mute);
+
+  --color-border: var(--vt-c-divider-light-2);
+  --color-border-hover: var(--vt-c-divider-light-1);
+
+  --color-heading: var(--vt-c-text-light-1);
+  --color-text: var(--vt-c-text-light-1);
+
+  --section-gap: 160px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: var(--vt-c-black);
+    --color-background-soft: var(--vt-c-black-soft);
+    --color-background-mute: var(--vt-c-black-mute);
+
+    --color-border: var(--vt-c-divider-dark-2);
+    --color-border-hover: var(--vt-c-divider-dark-1);
+
+    --color-heading: var(--vt-c-text-dark-1);
+    --color-text: var(--vt-c-text-dark-2);
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  color: var(--color-text);
+  background: var(--color-background);
+  transition: color 0.5s, background-color 0.5s;
+  line-height: 1.6;
+  font-size: 16px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0 15px;
+  font-family: "Fira Mono", monospace;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Fenix", sans-serif;
+  margin-bottom: 0;
+}
+
+main {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+}
+
+header {
+  height: 15vh;
+}
+
+a {
+  background-color: rgb(95, 57, 88);
+  padding: 2px;
+  text-decoration: none;
+  color: var(--main-color);
+}
+
+a:link,
+a:visited {
+  color: var(--main-color);
+}
+
+ul {
+  padding: 0;
+  list-style: inside square;
+  text-align: left;
+}
+
+section {
+  margin: auto;
+  max-width: 700px;
+}
+
+section.skills {
+  max-width: none;
+}
+
+div.skills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+div.skills div {
+  margin: 15px;
+}
