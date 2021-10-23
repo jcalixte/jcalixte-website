@@ -1,3 +1,9 @@
+<script setup lang="ts">
+import { usePapers } from '@/modules/papers/hooks/usePapers.hook'
+
+usePapers()
+</script>
+
 <template>
   <div class="blog"></div>
 </template>
