@@ -34,8 +34,10 @@ function withExcerpt(post: Paper) {
 }
 
 export const getPapers = () => {
-  const papersFiles = Object.values(
+  const paperFiles = Object.values(
     (import.meta as any).globEagerDefault('../../../papers/**/*.{md,mdx}')
   ) as Paper[]
-  return papersFiles.sort(byDate).map(withExcerpt)
+  console.log(paperFiles)
+
+  return paperFiles.sort(byDate).map(withExcerpt)
 }

@@ -6,10 +6,9 @@ const papers = getPapers()
 
 <template>
   <div class="blog">
-    {{ papers }}
-    <li v-for="paper of papers" :key="paper.title" class="py-12">
+    <article v-for="paper of papers" :key="paper.title" class="py-12">
       <component :is="paper.excerpt" />
-    </li>
+    </article>
   </div>
 </template>
 
