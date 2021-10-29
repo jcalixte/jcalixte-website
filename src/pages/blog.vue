@@ -1,17 +1,22 @@
 <script setup lang="ts">
-import { usePapers } from '@/modules/papers/hooks/usePapers.hook'
+import { getPapers } from '@/modules/papers/data/papers'
 
-usePapers()
+const papers = getPapers()
 </script>
 
 <template>
-  <div class="blog"></div>
+  <div class="blog">
+    {{ papers }}
+    <li v-for="paper of papers" :key="paper.title" class="py-12">
+      {{ paper.title }}
+    </li>
+  </div>
 </template>
 
 <style>
 @media (min-width: 1024px) {
   .blog {
-    display: flex;
+    flex: 1;
     align-items: space-between;
   }
 }
