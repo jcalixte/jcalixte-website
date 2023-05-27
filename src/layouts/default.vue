@@ -13,11 +13,10 @@
 </template>
 
 <style>
-@import "~/assets/base.css";
+@import '~/assets/base.css';
 
 #app {
   width: 100%;
-  max-width: 1280px;
   margin: 0;
   padding: 2rem;
 
